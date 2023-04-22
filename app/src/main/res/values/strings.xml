@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">First Application</string>
+    <string name="temp">Hello World!temp</string>
+    <string name="temp_new">View can be considered as a rectangle on the screen that shows some type of content. It can be an image, a piece of text, a button or anything that an android application can display. The rectangle here is actually invisible, but every view occupies a rectangle shape. The question that might be bothering you would be , what can be the size of this rectangle? The answer is either we can set it manually, by specifying the exact size(with proper units) or by using some predefined values. These predefined values are match_parent and wrap_content.</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+    <string-array name="my_interests">
+        <item>Playing cricket</item>
+        <item>Playing Volleyball</item>
+        <item>Watching Movies</item>
+    </string-array>
+</resources>
