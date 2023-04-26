@@ -2,8 +2,10 @@ package com.example.firstapplication
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.View.OnClickListener
 import android.widget.*
@@ -24,6 +26,7 @@ class MainActivity : AppCompatActivity() , OnClickListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        Log.i("MY_LOG","happening")
 
         binding.interested.setOnClickListener(this)
         binding.notInterested.setOnClickListener(this)
@@ -38,7 +41,9 @@ class MainActivity : AppCompatActivity() , OnClickListener {
         }
 
         binding.radioGroup.setOnCheckedChangeListener { radioGroup, i ->
-            if(i == R.id.radioButton2)
+            if(i == R.id.radioButton2){
+
+            }
             Toast.makeText(this, "Male Selected", Toast.LENGTH_SHORT).show()
         }
 
@@ -60,7 +65,7 @@ class MainActivity : AppCompatActivity() , OnClickListener {
 
         binding.spinner.onItemSelectedListener = object: OnItemSelectedListener{
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, position: Int, id: Long) {
-                Toast.makeText(this@MainActivity,myNewInterstes[position],
+                Toast.makeText(this@MainActivity,binding.spinner.getItemAtPosition(position).toString(),
                     Toast
                     .LENGTH_SHORT).show()
             }
